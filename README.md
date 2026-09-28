@@ -25,3 +25,7 @@ Lo usaré para los ejercicios de todas las asignaturas del ciclo. De momento sol
 1. Escribo el ejercicio en las notas del móvil, con el enunciado como comentario al inicio.
 2. Reviso el código antes de subirlo: sintaxis, lógica y cumplimiento del enunciado. En este caso uso una herramienta de IA solo para detectar errores y simular la ejecución; no me da la solución, corrijo yo.
 3. Lo subo a `Codigo sin ejecutar/` con el marcador `//PENDIENTE DE EJECUTAR`, y cuando llego al ordenador lo ejecuto de verdad y comparo el resultado real con lo esperado.
+
+## Nomenclatura de los archivos Java
+
+Los archivos siguen el formato `LibroXEjercicioY.java`, donde **X** es el capítulo del libro y **Y** el número del ejercicio. Por ejemplo, `Libro2Ejercicio5.java` es el ejercicio 5 del capítulo 2.
