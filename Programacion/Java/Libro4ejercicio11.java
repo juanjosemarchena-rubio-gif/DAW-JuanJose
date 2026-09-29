@@ -14,7 +14,7 @@ public class Libro4ejercicio11{
 	int seg = hseg + mseg;
 	int medianoche = 24 * 3600;
 	int falta = medianoche - seg;
-	System.out.println("Para medianoche quedan " + medianoche + " segundos");
+	System.out.println("Para medianoche quedan " + falta + " segundos");
 	
 	
 	
