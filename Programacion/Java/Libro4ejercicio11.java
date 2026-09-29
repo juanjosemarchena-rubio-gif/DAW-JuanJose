@@ -2,7 +2,7 @@
 calcule los segundos que faltan para llegar a la medianoche.*/
 
 import java.util.*;
-public class Libro4ejercicio5{
+public class Libro4ejercicio11{
 	public static void main(String [] args){
 	Scanner s = new Scanner(System.in);
 	System.out.println("Introduce la hora");
