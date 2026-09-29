@@ -11,6 +11,6 @@ double notad = s.nextDouble();
 double nota2 = (notad - nota1 * 0.4) / 0.6;
 System.out.println("Si la nota que deseas es " + notad + " la nota que necesitas en el segundo examen es " + nota2);
 
-//Pendiente de  ejecutar
+
 }
 }
