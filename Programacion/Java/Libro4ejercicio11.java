@@ -9,13 +9,19 @@ public class Libro4ejercicio11{
 	int hora = s.nextInt();
 	System.out.println("Introduce los minutos");
 	int minutos = s.nextInt();
-	int hseg = hora * 3600;
-	int mseg = minutos * 60;
-	int seg = hseg + mseg;
-	int medianoche = 24 * 3600;
-	int falta = medianoche - seg;
-	System.out.println("Para medianoche quedan " + falta + " segundos");
+		if(hora <0 || >23){
+		System.out.println("La hora introducida es incorrecta");
 	
+		}else if(minutos <0 || >59){
+			System.out.println("Los minutos introducidos son incorrectos");
+			}else{
+			int hseg = hora * 3600;
+			int mseg = minutos * 60;
+			int seg = hseg + mseg;
+			int medianoche = 24 * 3600;
+			int falta = medianoche - seg;
+			System.out.println("Para medianoche quedan " + falta + " segundos");
+			}
 	
 	
 	}
