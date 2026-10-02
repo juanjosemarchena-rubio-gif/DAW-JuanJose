@@ -1,6 +1,6 @@
 /*Realiza un programa que calcule la media de tres notas.*/
 import java.util.*;
-public class Libro4Ejercicio7{
+public class Libro4ejercicio7{
     public static void main(String [] args){
     
     Scanner s = new Scanner(System.in);
