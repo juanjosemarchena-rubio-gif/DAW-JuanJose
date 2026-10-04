@@ -20,9 +20,9 @@ public class Libro4ejercicio21{
     System.out.println("Introduce la segunda nota");
     n2 = s.nextDouble();
     s.nextLine();
-    int media = (n1 + n2) / 2;
+    double media = (n1 + n2) / 2;
         if(media <5){
-        System.out.println("¿Cual ha sido la nota de recuperación?(apto/no apto");
+        System.out.println("¿Cual ha sido la nota de recuperación?(apto/no apto)");
         String recu = s.nextLine();
             switch(recu){
             case "apto" -> System.out.println("Tu media en programación es 5, apto");
