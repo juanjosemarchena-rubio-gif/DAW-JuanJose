@@ -16,6 +16,8 @@ public class Libro4ejercicio18{
 			System.out.println("La primera cifra es " + numero / 100);
 			}else if((numero >=1000) && (numero <=9999)){
 			System.out.println("La primera cifra es " + numero / 1000);
+			}else if((numero >=10000) && (numero <=99999)){
+			System.out.println("La primera cifra es " + numero / 10000);
 		
 		}
 	}
