@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario básico</title>
+</head>
+<body>
+    <form action="https://ciclos.iesruizgijon.es/my/" method="post">   
+        *Escribe tu nombre:   <input type="text" name="nombre" minlength="3" 
+        maxlength="10" required name="nombre" />   
+        <br/>   
+        *Escribe tu apellido: <input type="text" size="40" name="lastname" required>
+        <br>
+        Escribe tu ciclo: <input type="text" name="ciclo" value="DAW">
+        <br>
+        Escribe tu curso: <input type="number" min="1" max="3" step="0.25" name="curso">
+        <br>
+        Escribe tu contraseña: <input type="password" name="contraseña">
+        <!--TODO quiero un campo dni con tu numeroyletra ya escrito por defecto y que no se pueda cambiar-->
+        <br>
+        Fecha de nacimiento: <input type="datetime-local">
+        DNI: <input type="text" value="41234465P" readonly name="dni">
+
+
+        <input type="submit" value="Enviar" /> </form> 
+        <input type="reset" value="reset">
+        <h1>*CAMPOS OBLIGATORIOS</h1>
+</body>
+</html>
