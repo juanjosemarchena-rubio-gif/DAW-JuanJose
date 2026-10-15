@@ -17,8 +17,12 @@ public class Adivinanumero{
 				}else if(num > (aleatorio + 60)){
 					System.out.println("¡Muy lejos, baja!");
 				}else if(num < (aleatorio - 40)){
-				System.out.println("¡Te estás acercando, sube un poco!");
+				System.out.println("¡Frío, frío sube!");
 				}else if(num > (aleatorio + 40)){
+					System.out.println("¡Frío, frío baja!");
+				}else if(num < (aleatorio - 20)){
+				System.out.println("¡Te estás acercando, sube un poco!");
+				}else if(num > (aleatorio + 20)){
 					System.out.println("¡Te estás acercando, baja un poco!");
 				}else if(num < aleatorio){
 				System.out.println("¡Estás muy cerca, sube un poco!");
