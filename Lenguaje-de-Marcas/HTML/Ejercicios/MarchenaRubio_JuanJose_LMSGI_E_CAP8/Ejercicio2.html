@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Mis Módulos</title>
+</head>
+<body>
+
+  <h3>Mis Módulos</h3>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Datos Personales</legend>
+
+      <label for="provincia">Provincia:</label><br>
+      <select id="provincia" name="provincia">
+        <option value="almeria" selected="selected">Almería</option>
+        <option value="cadiz">Cádiz</option>
+        <option value="cordoba">Córdoba</option>
+        <option value="granada">Granada</option>
+        <option value="huelva">Huelva</option>
+        <option value="jaen">Jaén</option>
+        <option value="malaga">Málaga</option>
+        <option value="sevilla">Sevilla</option>
+      </select><br><br>
+
+      Fecha Nacimiento:<br>
+      <input type="text" name="dia" value="6" size="2" maxlength="2">
+      de
+      <select name="mes">
+        <option value="1">Enero</option>
+        <option value="2" selected="selected">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+      </select>
+      de
+      <input type="text" name="anio" size="4" maxlength="4"><br><br>
+
+      <!-- multiple: se pueden elegir varios; size: se ven 5 filas a la vez -->
+      <label for="modulos">Módulos:</label><br>
+      <select id="modulos" name="modulos[]" multiple="multiple" size="5">
+        <option value="bd" selected="selected">Bases de Datos</option>
+        <option value="prog">Programación</option>
+        <option value="si">Sistemas Informáticos</option>
+        <option value="lm">Lenguajes de Marcas</option>
+        <option value="ed">Entornos de Desarrollo</option>
+        <option value="ipe">Itinerario Personal para la Empleabilidad I</option>
+      </select>
+
+    </fieldset>
+  </form>
+
+</body>
+</html>

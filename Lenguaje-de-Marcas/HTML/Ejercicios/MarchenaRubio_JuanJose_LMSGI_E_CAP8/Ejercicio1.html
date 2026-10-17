@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1 - Mi nuevo CV</title>
+</head>
+<body>
+
+  <h1>MI NUEVO CV</h1>
+
+  <!-- POST porque hay contraseña y archivo; enctype obligatorio al subir archivos -->
+  <form action="/php/new_cv.php" method="post" enctype="multipart/form-data">
+
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" maxlength="30"><br>
+
+    <label for="apellidos">Apellidos:</label><br>
+    <input type="text" id="apellidos" name="apellidos" maxlength="80" size="50"><br>
+
+    <label for="clave">Contraseña:</label><br>
+    <input type="password" id="clave" name="clave" maxlength="10"><br>
+
+    <!-- DNI: 8 números + 1 letra = 9 caracteres -->
+    <label for="dni">DNI:</label><br>
+    <input type="text" id="dni" name="dni" size="9" maxlength="9" minlength="9"
+           pattern="[0-9]{8}[A-Za-z]" title="8 números y una letra"><br>
+
+    Sexo:<br>
+    <input type="radio" id="hombre" name="sexo" value="hombre" checked="checked">
+    <label for="hombre">Hombre</label><br>
+    <input type="radio" id="mujer" name="sexo" value="mujer">
+    <label for="mujer">Mujer</label><br><br>
+
+    <label for="foto">Foto:</label>
+    <input type="file" id="foto" name="foto"><br><br>
+
+    <input type="checkbox" id="boletin" name="boletin" value="si" checked="checked">
+    <label for="boletin">Suscribirme al Boletín de Novedades</label><br><br>
+
+    <input type="submit" value="Guardar Cambios">
+    <input type="reset" value="Borrar Datos">
+
+  </form>
+
+</body>
+</html>
