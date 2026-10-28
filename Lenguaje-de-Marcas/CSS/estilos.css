@@ -1,0 +1,13 @@
+*{
+background-color: white;
+}
+em{
+    background-color: red;
+    display:block;
+}
+#amarillo{
+    background-color: yellow;
+}
+.verde{
+    background-color: green;
+}
