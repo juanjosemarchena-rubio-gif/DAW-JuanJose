@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+    =====================================================
+    Lenguaje de Marcas - 1º DAW
+    Ejercicios Capítulo 11 - HTML
+    Ejercicio 3: Elegir el periódico que se ve en un iframe
+    Alumno: Juan José Marchena Rubio
+    =====================================================
+    Idea general (el "truco" del ejercicio):
+    - Le ponemos un NOMBRE al iframe con el atributo name="periodico".
+    - En los enlaces ponemos target="periodico".
+    - Así, al pulsar un enlace, la página NO se abre en una pestaña nueva
+      ni sustituye a la nuestra: se abre DENTRO del iframe que se llama así.
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elige tu periódico favorito</title>
+</head>
+<body>
+
+    <h4>Elige tu PERIODICO favorito</h4>
+
+    <!-- Lista de enlaces. Todos apuntan (target) al iframe "periodico" -->
+    <ul>
+        <li><a href="https://www.marca.com" target="periodico">MARCA</a></li>
+        <li><a href="https://www.elmundo.es" target="periodico">EL MUNDO</a></li>
+        <li><a href="https://elpais.com" target="periodico">EL PAIS</a></li>
+        <!-- Este abre el buscador bing para buscar otro periódico -->
+        <li><a href="https://www.bing.com/" target="periodico">Busca otro periodico</a></li>
+    </ul>
+
+    <!--
+        El iframe donde se cargan los periódicos.
+        - name="periodico": el nombre que usan los enlaces en su target.
+        - src: lo que se ve al abrir la página (Bing, como en la imagen).
+        - width / height: tamaño del marco.
+
+        NOTA PARA LA EXPOSICIÓN:
+        Muchas webs (sobre todo periódicos y Google) NO dejan que se
+        muestren dentro de un iframe de otra página. Lo bloquean con una
+        cabecera de seguridad llamada "X-Frame-Options" o con
+        "Content-Security-Policy", para evitar que otra web se haga pasar
+        por ellos (ataque de "clickjacking"). Por eso puede que algún
+        periódico salga en blanco o con un mensaje de error: no es fallo
+        de nuestro código, es que esa web no lo permite.
+    -->
+    <iframe
+        name="periodico"
+        src="https://www.bing.com"
+        width="800" height="550"
+        title="Periódico seleccionado">
+    </iframe>
+
+</body>
+</html>

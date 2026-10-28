@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+    =====================================================
+    Lenguaje de Marcas - 1º DAW
+    Ejercicios Capítulo 11 - HTML
+    Ejercicio 1: Currículum con etiquetas <meta>
+    Alumno: Juan José Marchena Rubio
+    =====================================================
+    Idea general:
+    - Las etiquetas <meta> van dentro del <head> y NO se ven en la página.
+      Son información "sobre" la página (metadatos) que leen los
+      navegadores y los buscadores como Google.
+    - La forma típica es: <meta name="QUÉ ES" content="SU VALOR">
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1) Autor de la web -->
+    <meta name="author" content="Juan José">
+
+    <!-- 2) Descripción: es el texto que suele salir debajo del título
+            en los resultados de Google -->
+    <meta name="description" content="Currículum de Juan José: experiencia en la industria del metal y estudiante de 1º de Desarrollo de Aplicaciones Web.">
+
+    <!-- 3) Programa usado para hacer la web -->
+    <meta name="generator" content="Visual Studio Code">
+
+    <!-- 4) Palabras clave para los buscadores, separadas por comas
+            (hoy Google casi no las usa, pero el ejercicio las pide) -->
+    <meta name="keywords" content="currículum, CV, DAW, desarrollo web, HTML, Sevilla, puente grúa, industria">
+
+    <!-- 5) URL con la información de copyright.
+            Pongo la licencia Creative Commons como ejemplo de web de copyright.
+            Se puede poner con <meta> y también con <link rel="license">,
+            que es la forma más "oficial" en HTML5. Pongo las dos. -->
+    <meta name="copyright" content="https://creativecommons.org/licenses/by/4.0/deed.es">
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.es">
+
+    <title>Currículum - Juan José</title>
+</head>
+<body>
+
+    <!-- A partir de aquí, el contenido VISIBLE del currículum -->
+    <header>
+        <h1>Juan José</h1>
+        <p><strong>Estudiante de 1º DAW | Operador de puente grúa</strong></p>
+        <p>Sevilla</p>
+    </header>
+
+    <!-- section: agrupa cada parte del currículum -->
+    <section>
+        <h2>Perfil</h2>
+        <p>
+            Profesional del sector industrial que se está formando en desarrollo
+            de aplicaciones web. Me interesa la automatización y aplicar la
+            tecnología a procesos reales de empresa.
+        </p>
+    </section>
+
+    <section>
+        <h2>Formación</h2>
+        <!-- ul = lista sin numerar, li = cada elemento -->
+        <ul>
+            <li>CFGS Desarrollo de Aplicaciones Web (en curso) - IES Ruiz Gijón, Utrera.</li>
+            <li>Prueba de acceso a Ciclos Formativos de Grado Superior.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Experiencia laboral</h2>
+        <ul>
+            <li><strong>Operador de puente grúa</strong> - Industria del metal (desde 2025).</li>
+            <li><strong>Montador de estructuras metálicas</strong> - Industria del metal.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Conocimientos</h2>
+        <ul>
+            <li>HTML y CSS (nivel inicial)</li>
+            <li>Java (nivel inicial)</li>
+            <li>Git y GitHub</li>
+            <li>Automatización con n8n</li>
+        </ul>
+    </section>
+
+    <footer>
+        <!-- &copy; es la entidad del símbolo © -->
+        <p>&copy; 2026 Juan José - Contenido bajo licencia Creative Commons.</p>
+    </footer>
+
+</body>
+</html>

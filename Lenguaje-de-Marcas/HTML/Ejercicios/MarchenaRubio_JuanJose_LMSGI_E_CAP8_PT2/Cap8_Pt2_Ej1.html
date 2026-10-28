@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+    =====================================================
+    Lenguaje de Marcas - 1º DAW
+    Ejercicios Capítulo 12 - HTML
+    Ejercicio 1: Formulario con los nuevos controles de HTML5
+    Alumno: Juan José Marchena Rubio
+    =====================================================
+    Idea general:
+    - HTML5 trajo muchos "type" nuevos para <input> (email, url, date,
+      color...). El navegador ya sabe qué tipo de dato es y:
+        * muestra un control especial (calendario, selector de color...)
+        * comprueba (valida) el dato antes de enviar el formulario.
+    - Así nos ahorramos validar con JavaScript cosas sencillas.
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos en HTML5</title>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Datos en html5</legend>
+
+            <!-- NOMBRE
+                 required: no deja enviar el formulario si está vacío.
+                 autofocus: el cursor ya aparece dentro de esta caja al
+                 cargar la página (solo debe haber UNO por página). -->
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required autofocus>
+            </p>
+
+            <!-- CORREO
+                 type="email": el navegador comprueba que tenga formato
+                 de correo (algo@algo). Con required además es obligatorio. -->
+            <p>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </p>
+
+            <!-- URL
+                 type="url": comprueba que empiece por http:// o https://
+                 placeholder: el texto gris de ayuda que desaparece al escribir. -->
+            <p>
+                <label for="url">URL:</label>
+                <input type="url" id="url" name="url" placeholder="Escribe la URL de tu página web personal">
+            </p>
+
+            <!-- FECHA: muestra un calendario (dd/mm/aaaa) -->
+            <p>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+            </p>
+
+            <!-- TIEMPO: para elegir hora y minutos (--:--) -->
+            <p>
+                <label for="tiempo">Tiempo:</label>
+                <input type="time" id="tiempo" name="tiempo">
+            </p>
+
+            <!-- FECHA Y HORA
+                 El ejercicio pide type="datetime". OJO: este tipo se quitó
+                 del estándar y los navegadores actuales no lo entienden, así
+                 que lo muestran como una caja de texto normal (por eso en la
+                 imagen del enunciado sale vacía, sin calendario).
+                 El que sí funciona hoy es type="datetime-local". -->
+            <p>
+                <label for="fechahora">Fecha y hora:</label>
+                <input type="datetime-local" id="fechahora" name="fechahora">
+                <!-- Versión que funciona en los navegadores actuales:
+                <input type="datetime-local" id="fechahora" name="fechahora">
+                -->
+            </p>
+
+            <!-- MES: elige mes y año ("---------- de ----") -->
+            <p>
+                <label for="mes">Mes:</label>
+                <input type="month" id="mes" name="mes">
+            </p>
+
+            <!-- SEMANA: elige número de semana y año -->
+            <p>
+                <label for="semana">Semana:</label>
+                <input type="week" id="semana" name="semana">
+            </p>
+
+            <!-- NÚMERO
+                 min y max: límites permitidos (de -10 a 10).
+                 value="0": valor inicial, como en la imagen.
+                 Salen unas flechitas para subir y bajar. -->
+            <p>
+                <label for="numero">Número (min -10, max 10):</label>
+                <input type="number" id="numero" name="numero" min="-10" max="10" value="0">
+            </p>
+
+            <!-- NÚMERO HEXADECIMAL
+                 No existe un type "hexadecimal", así que usamos un texto con
+                 el atributo pattern, que es una EXPRESIÓN REGULAR (un patrón).
+                   [0-9A-Fa-f] = un carácter que sea del 0 al 9 o de la A a la F
+                                 (mayúscula o minúscula)
+                   {3}         = exactamente 3 veces
+                 title: el mensaje que sale si el dato no cumple el patrón.
+                 maxlength="3": no deja escribir más de 3 caracteres. -->
+            <p>
+                <label for="hexa">Número hexadecimal de 3 dígitos (0 a 9 y A a F):</label>
+                <input type="text" id="hexa" name="hexa" pattern="[0-9A-Fa-f]{3}" maxlength="3"
+                       title="Escribe 3 caracteres: del 0 al 9 o de la A a la F">
+            </p>
+
+            <!-- NÚMERO BINARIO
+                   [01]  = solo un 0 o un 1
+                   {1,6} = entre 1 y 6 veces -->
+            <p>
+                <label for="binario">Número binario (solo 0 o 1) de 1 a 6 dígitos:</label>
+                <input type="text" id="binario" name="binario" pattern="[01]{1,6}" maxlength="6"
+                       title="Escribe de 1 a 6 cifras, solo ceros y unos">
+            </p>
+
+            <!-- COLOR: abre la paleta de colores del sistema.
+                 Por defecto sale negro (#000000), como en la imagen. -->
+            <p>
+                <label for="color">Color favorito:</label>
+                <input type="color" id="color" name="color">
+            </p>
+
+            <!-- BOTÓN DE ENVÍO: al pulsarlo se hacen todas las comprobaciones
+                 (required, email, url, min/max, pattern...) y si algo está mal
+                 el navegador avisa y NO envía. -->
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+</html>

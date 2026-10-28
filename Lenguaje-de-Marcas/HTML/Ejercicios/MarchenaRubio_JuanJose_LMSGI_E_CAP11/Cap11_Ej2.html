@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+    =====================================================
+    Lenguaje de Marcas - 1º DAW
+    Ejercicios Capítulo 11 - HTML
+    Ejercicio 2: Mapa de Google Maps + videoclip de YouTube
+    Alumno: Juan José Marchena Rubio
+    =====================================================
+    Idea general:
+    - Un <iframe> es como una "ventana" dentro de nuestra página que
+      muestra OTRA página web. Así metemos el mapa y el vídeo.
+    - No hace falta escribir el código a mano: Google Maps y YouTube
+      lo generan solos:
+        * Google Maps: buscar la dirección > Compartir > Insertar un mapa > Copiar HTML
+        * YouTube: debajo del vídeo > Compartir > Insertar > Copiar
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Casa - Mi videoclip favorito</title>
+</head>
+<body>
+
+    <h4>Mi Casa - Mi videoclip favorito</h4>
+
+    <!--
+        IFRAME 1: GOOGLE MAPS
+        - src: la dirección del mapa. Con "output=embed" Google devuelve
+          el mapa preparado para insertarlo en otra web.
+        - Como ejemplo pongo el instituto (IES Ruiz Gijón, Utrera).
+          Para poner mi casa: cambiar lo que va después de "q=" por mi
+          dirección, o pegar el código que da Google Maps al compartir.
+        - width / height: tamaño en píxeles.
+        - style="border:0": quita el borde que el iframe trae por defecto.
+        - allowfullscreen: deja ponerlo a pantalla completa.
+        - loading="lazy": no lo carga hasta que se va a ver (va más rápido).
+    -->
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3179.702593877229!2d-5.721810323710923!3d37.15977064734755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0d7ffd452fe217%3A0x9fb561561d120e02!2sC.%20Fuente%20la%20Higuera%2C%2041750%20Los%20Molares%2C%20Sevilla!5e0!3m2!1ses!2ses!4v1793186148773!5m2!1ses!2ses"
+        width="400" height="300"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        title="Mapa de mi casa">
+    </iframe>
+
+    <!--
+        IFRAME 2: YOUTUBE
+        - La URL normal de YouTube es: https://www.youtube.com/watch?v=CODIGO
+        - Para insertarlo hay que usar la forma "embed":
+              https://www.youtube.com/embed/CODIGO
+          ¡OJO! Si pones la URL normal (watch?v=) dentro del iframe NO funciona,
+          YouTube no deja. Es un fallo muy típico.
+        - El código del vídeo son las letras y números que van después
+          de "v=" en la URL (aquí: fJ5CN04CvxM).
+        - allow: permisos que le damos al vídeo (reproducir, pantalla completa...).
+        - referrerpolicy: YouTube exige saber desde qué web se está viendo
+          el vídeo (el "referer"). Si no lo recibe, sale el "Error 153".
+          ¡OJO! Si abres el archivo con doble clic (file:///...) no hay web
+          de origen y el vídeo NO carga. Hay que abrirlo con un servidor,
+          por ejemplo la extensión "Live Server" de VS Code (http://127.0.0.1:5500).
+        - Los dos iframes se ven uno al lado del otro porque un iframe es
+          un elemento "en línea" (inline), igual que una imagen.
+    -->
+    <iframe
+        width="400" height="225"
+        src="https://www.youtube.com/embed/I_3JWgVJA8A"
+        title="Mi videoclip favorito"
+        style="border:0;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+
+</body>
+</html>
