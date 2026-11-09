@@ -1,0 +1,115 @@
+ul, ul li { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, p, form { margin: 0; padding: 0; }
+img { border: none; }
+.clear { clear: both; }
+
+/*3- Las cajas o layout */
+#contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: auto}
+
+/* EJERCICIO 2 - punto 1: aquí estaba la regla que ponía el borde gris de 2px
+   a todas las cajas. La elimino y así desaparecen los bordes por defecto */
+
+#cabecera { clear: both; }
+#menu { clear: both; }
+/* ajustamos a izda*/
+#lateral { float: left; width:20%; }
+#contenido { float: right; width: 78%; }
+#contenido #principal { float: left; width: 78%; }
+#contenido #secundario { float: right; width: 20%; }
+#pie { clear: both; }
+
+#cabecera #logo { float: left; }
+#cabecera #buscador { float: right; }
+
+#menu ul#menu_principal li { display: inline; float: left; }
+
+#contenido #principal .articulo img { width: 100px; float: left; }
+
+#pie .enlaces   { float: left; }
+#pie .copyright { float: right; }
+
+/* ================== EJERCICIO 1: márgenes y rellenos ================== */
+
+/* 1. La cabecera tiene 1em de relleno por todos los lados */
+#cabecera { padding: 1em; }
+
+/* 2. El menú: 0.5em de relleno y 0.5em de margen solo por abajo */
+#menu { padding: .5em; margin-bottom: .5em; }
+
+/* 3. El resto de cajas llevan 0.5em de relleno en los cuatro lados
+      (los junto en una sola regla separados por comas) */
+#noticias, #publicidad, #principal, #secundario { padding: .5em; }
+
+/* 3. El pie solo tiene relleno arriba y abajo (0.5em), izquierda y derecha 0.
+      Uso la forma corta: primer valor = arriba/abajo, segundo = izq/dcha */
+#pie { padding: .5em 0; }
+
+/* 4. Separación de 1em entre los artículos: margen inferior en cada .articulo */
+.articulo { margin-bottom: 1em; }
+
+/* 5. Las imágenes de los artículos tienen 0.5em de margen en todos los lados */
+.articulo img { margin: .5em; }
+
+/* 6. #publicidad separado 1em del elemento de arriba (#noticias) */
+#publicidad { margin-top: 1em; }
+
+/* 7. El pie tiene 1em de margen superior */
+#pie { margin-top: 1em; }
+
+/* Ajuste extra: al añadir relleno (y borde) a #principal y #secundario el ancho
+   total pasaba del 100% y el lateral derecho se me caía debajo del principal.
+   Con box-sizing: border-box el width ya incluye relleno y borde, así que
+   siguen cabiendo uno al lado del otro */
+#principal, #secundario { box-sizing: border-box; }
+
+/* ================== EJERCICIO 2: bordes ================== */
+
+/* 2. Menú: solo borde inferior de 1px azul (#004C99) */
+#menu { border-bottom: 1px solid #004C99; }
+
+/* 3. Noticias: borde de 1px gris claro por los cuatro lados */
+#noticias { border: 1px solid #C5C5C5; }
+
+/* 4. Publicidad: borde discontinuo (dashed) de 1px y color #CC6600 */
+#publicidad { border: 1px dashed #CC6600; }
+
+/* 5. Secundario: borde de 1px continuo y color #CC6600 */
+#secundario { border: 1px solid #CC6600; }
+
+/* 6. Pie: borde arriba y abajo de 1px gris claro (no pongo izq. ni dcha.) */
+#pie {
+    border-top: 1px solid #C5C5C5;
+    border-bottom: 1px solid #C5C5C5;
+}
+
+/* ================== EJERCICIO 3: colores e imágenes de fondo ================== */
+
+/* 1. Noticias y pie con fondo gris claro #F8F8F8 */
+#noticias, #pie { background-color: #F8F8F8; }
+
+/* 2. Publicidad con fondo amarillo claro */
+#publicidad { background-color: #FFF6CD; }
+
+/* 3. Los h2 del lateral secundario: fondo #DB905C y padding de .2em
+      (selector descendiente: h2 dentro de #secundario) */
+#secundario h2 { background-color: #DB905C; padding: .2em; }
+
+/* 4. El fondo del menú es una imagen pequeña que se repite.
+      La ruta lleva ../ porque el CSS está en la carpeta css/ y la imagen
+      en imagenes/. Uso repeat-x porque solo hace falta que se repita en horizontal */
+#menu { background: url(../imagenes/fondo_menu.gif) repeat-x; }
+
+/* 5. El logotipo es una imagen de fondo del h1 de la cabecera.
+      Como el h1 se queda sin contenido visible, le pongo el mismo
+      ancho y alto que tiene la imagen (162x53) */
+#cabecera h1 {
+    width: 162px;
+    height: 53px;
+    background: url(../imagenes/logo.gif) no-repeat;
+}
+
+/* Escondo el texto "LOGOTIPO" para que solo se vea la imagen */
+#cabecera h1 span { display: none; }

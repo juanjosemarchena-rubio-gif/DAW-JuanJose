@@ -1,0 +1,49 @@
+/* He ido mirando la imagen del enunciado elemento por elemento */
+
+/* El titulo h1 sale en teal. Uso el id #titulo */
+#titulo { color: teal; }
+
+/* Las negritas (strong) salen en rojo */
+strong { color: red; }
+
+/* La clase .destacado (span del primer parrafo) es naranja */
+.destacado { color: orange; }
+
+/* El subtitulo h2 es azul, lo selecciono por su id */
+#subtitulo { color: blue; }
+
+/* Todos los enlaces son rojos */
+a { color: red; }
+
+/* El em que esta dentro de un enlace se ve azul (selector descendiente) */
+a em { color: blue; }
+
+/* La clase .especial es morada. Ojo: tambien la tienen algunos th,
+   pero luego los sobreescribo con una regla mas especifica */
+.especial { color: purple; }
+
+/* El caption (titulo de la tabla) es azul */
+caption { color: blue; }
+
+/* Los th normales (los del pie y "Titulo fila 2") salen en rojo */
+th { color: red; }
+
+/* Los th con clase especial son naranjas. Al ser th.especial pesa mas
+   que .especial y que th, asi que gana a las dos reglas anteriores */
+th.especial { color: orange; }
+
+/* El texto de las celdas td es verde (el em de "blandit" lo hereda) */
+td { color: green; }
+
+/* El strong dentro de una celda es naranja, no rojo como el strong general */
+td strong { color: orange; }
+
+/* Todo el texto del div #adicional es olive */
+#adicional { color: olive; }
+
+/* El span con id "especial" es fucsia. Como es un id, gana a .especial */
+#especial { color: fuchsia; }
+
+/* Los enlaces dentro de #adicional son verdes. #adicional a es mas
+   especifico que "a" y por eso gana al rojo */
+#adicional a { color: green; }

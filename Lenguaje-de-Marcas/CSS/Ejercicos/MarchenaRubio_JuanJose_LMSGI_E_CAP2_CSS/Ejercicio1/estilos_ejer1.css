@@ -1,0 +1,27 @@
+/* Todos los elementos de la pagina */
+/* Uso el selector universal (*) porque afecta a todos los elementos */
+* { font: 1em/1.3 Arial, Helvetica, sans-serif; }
+ 
+/* Todos los parrafos de la pagina */
+/* Selector de tipo: basta con poner el nombre de la etiqueta */
+p { color: #555; }
+ 
+/* Todos los párrafos contenidos en #primero */
+/* Selector descendiente: #primero (id) + espacio + p */
+#primero p { color: #336699; }
+ 
+/* Todos los enlaces la pagina */
+/* Selector de tipo con la etiqueta a */
+a { color: #CC3300; }
+ 
+/* Los elementos "em" contenidos en #primero */
+/* Otro selector descendiente: em dentro del elemento con id "primero" */
+#primero em { background: #FFFFCC; padding: .1em; }
+ 
+/* Todos los elementos "em" de clase "especial" en toda la pagina */
+/* Etiqueta + clase pegadas (sin espacio): em.especial */
+em.especial { background: #FFCC99; border: 1px solid #FF9900; padding: .1em; }
+ 
+/* Elementos "span" contenidos en .normal */
+/* Selector descendiente: la clase se escribe con punto (.normal) */
+.normal span { font-weight: bold; }
