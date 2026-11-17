@@ -25,11 +25,16 @@ public class ArrayE15{
     for(int i=0; i <mesas.length; i++){
         mesas[i] = r.nextInt(0,5);
         }
+<<<<<<< HEAD
     System.out.println(Arrays.toString(mesas));
+=======
+    imprimeArray(mesas);
+>>>>>>> 1f94679 (Ejercicios de clase)
 
     do{
         System.out.println("¿Cuántos son? (Introduzca -1 para salir del programa)");
         comensales = sc.nextInt();
+<<<<<<< HEAD
         for(int j:mesas){
             if(comensales >MAX){
                 System.out.println("Lo siento, no admitimos grupos de " + comensales + ", haga grupos de 4 personas como máximo e intente de nuevo");
@@ -39,14 +44,79 @@ public class ArrayE15{
                         System.out.println("Bienvenidos, pueden sentarse en la mesa " + (j+1));
                         mesas[j] = comensales + mesas[j];
                         System.out.println(Arrays.toString(mesas));
+=======
+        if(comensales <0){
+			System.out.println("Hasta pronto");
+			}else if(comensales >MAX){
+                System.out.println("Lo siento, no admitimos grupos de " + comensales + ", haga grupos de 4 personas como máximo e intente de nuevo");
+               }else{
+				   //Buscamos una mesa libre
+				   int mesaElegida= -1;
+				   
+				   for(int i=0; i <mesas.length && mesaElegida ==-1; i++){
+					   mesaElegida=i;
+					   mesas[i] = comensales;
+					   System.out.println("Bienvenidos, pueden sentarse en la mesa " + (i+1));
+					   }
+					   //Buscamos hueco para compartir
+				   for(int i=0; i <mesas.length && mesaElegida ==-1; i++){ 
+					   if(comensales + mesas[i] <= MAX){
+						   mesaElegida=i;
+						   mesas[i] =mesas[i] + comensales;
+						   System.out.println("Bienvenidos, pueden sentarse en la mesa " + (i+1));
+						   }
+					   }
+					   
+					    if( mesaElegida ==-1){
+					   System.out.println("Lo siento, en este momento no queda sitio");
+					   }
+				   }
+				  
+        }while(comensales >0);
+        /*for(int j:mesas){
+            if(comensales >MAX){
+                System.out.println("Lo siento, no admitimos grupos de " + comensales + ", haga grupos de 4 personas como máximo e intente de nuevo");
+               }else if(mesas[j] ==0){
+					System.out.println("Bienvenidos, pueden sentarse en la mesa " + (j+1));
+					mesas[j] = comensales + mesas[j];
+					System.out.println(Arrays.toString(mesas));
+>>>>>>> 1f94679 (Ejercicios de clase)
                         }else if(mesas[j] + comensales < MAX){
                             System.out.println("Bienvenidos, pueden sentarse en la mesa " + (j+1));
                             mesas[j] = comensales + mesas[j];
                             System.out.println(Arrays.toString(mesas));
                             }else{
                                 System.out.println("Lo siento, actualmente no tenemos sitio para grupos de " + comensales);
+<<<<<<< HEAD
                             }
         }while(mesas[j] <= MAX);
         System.out.println("Lo siento, el restaurante está completo, vuelvan en otro momento");
     }
 }
+=======
+							}
+                           
+        
+        System.out.println("Lo siento, el restaurante está completo, vuelvan en otro momento");
+		
+		} */
+	}
+	//funcion imprime
+	public static void imprimeArray (int[] arrayEnteros){
+		System.out.println("-----------------------------------");
+		System.out.print("|" + "Mesa nº");
+		for(int i=0; i < arrayEnteros.length; i++){
+			System.out.print("|" + (i+1));
+			}
+		System.out.print("|\n");
+		System.out.println("-----------------------------------");
+		System.out.println("|" + "Ocupación");
+		for(int i=0; i <arrayEnteros.length; i++){
+			System.out.print("|" + (i+1));
+			}
+		System.out.print("|\n");
+		System.out.println("-----------------------------------");		
+		
+		}
+}
+>>>>>>> 1f94679 (Ejercicios de clase)
