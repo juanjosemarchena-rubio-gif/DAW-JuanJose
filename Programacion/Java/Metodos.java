@@ -27,6 +27,9 @@ public class Metodos {
 		System.out.println("El máximo de vectorEnteros2 es= " + maximoVector(vectorEnteros2));
 		System.out.println("El máximo de vectorEnteros3 es= " + maximoVector(vectorEnteros3));
 		
+		incrementa(vectorEnteros);
+		
+		
 		//System.out.println("La suma de los vectores es= " + (sumaVector(vectorEnteros3) + sumaVector(vectorEnteros2) + sumaVector(vectorEnteros)));
 		
 		/*for(int i=0; i <vectorEnteros.length; i++){
@@ -63,6 +66,13 @@ public class Metodos {
 			
 				}
 			}
+		}
+		public static void incrementa (int[]vector, int incremento) {
+		
+		for(int i=0; i < vector.length ; i++){
+			vector[i]= vector[i] * incremento;
+			}
+		
 		}
 	}	
 
