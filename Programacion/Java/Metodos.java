@@ -30,22 +30,7 @@ public class Metodos {
 		incrementa(vectorEnteros);
 		
 		
-		//System.out.println("La suma de los vectores es= " + (sumaVector(vectorEnteros3) + sumaVector(vectorEnteros2) + sumaVector(vectorEnteros)));
 		
-		/*for(int i=0; i <vectorEnteros.length; i++){
-			suma= suma + vectorEnteros[i];
-			}
-		System.out.println("La suma de vectorEnteros es= " + suma);
-		suma=0;
-		for(int i=0; i <vectorEnteros2.length; i++){
-			suma= suma + vectorEnteros2[i];
-			}
-		System.out.println("La suma de vectorEnteros2 es= " + suma);
-		suma=0;
-		for(int i=0; i <vectorEnteros3.length; i++){
-			suma= suma + vectorEnteros3[i];
-			}
-		System.out.println("La suma de vectorEnteros3 es= " + suma);*/
 	}
 	
 	public static int sumaVector (int[] vector){
@@ -67,13 +52,7 @@ public class Metodos {
 				}
 			}
 		}
-		public static void incrementa (int[]vector, int incremento) {
 		
-		for(int i=0; i < vector.length ; i++){
-			vector[i]= vector[i] * incremento;
-			}
-		
-		}
 	}	
 
 
