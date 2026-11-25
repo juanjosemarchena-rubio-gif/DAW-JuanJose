@@ -1,0 +1,15 @@
+/* 1. Estado normal: enlace sin visitar en rojo */
+a:link {
+  color: #CC0000;
+}
+
+/* 3. Enlace ya visitado: gris claro */
+a:visited {
+  color: #CCC;
+}
+
+/* 2. Ratón encima: fondo rojo y letra blanca */
+a:hover {
+  color: #FFF;
+  background-color: #CC0000;
+}
